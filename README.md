@@ -95,7 +95,30 @@ const report = await stressor.run();
 
 ## Ecosistema
 
-...
+### CLI Tool
+
+> [Enlace al proyecto](https://github.com/rodnye/stressor-cli)
+
+Stressor incluye una CLI completa para ejecutar pruebas desde terminal:
+
+```bash
+# Instalación global
+npm install -g stressor-cli
+
+# Ejecutar tests desde archivo de configuración
+stressor run -c config.yaml
+
+# Ejecutar audit test directo
+stressor test audit --url https://example.com
+
+# Ejecutar load test directo
+stressor test load --scenario ./tests/api.yml --vus 20 --duration 1m
+```
+
+**Comandos principales:**
+- `stressor run` - Ejecuta tests desde archivo de configuración
+- `stressor test audit` - Ejecuta auditorías Lighthouse
+- `stressor test load` - Ejecuta pruebas de carga k6
 
 
 ## API Reference
